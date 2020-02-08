@@ -46,7 +46,7 @@ It is well tested on Parrot Security OS 4.0.1. Other penetration testing Linux d
 ### Version 1.0 R.6d (2017-12-05)  
 [+] Fix for Github and newer version (aireplay-ng display) (waidps2.py)  
   
-<b>Version 1.0 R.6e (2017-12-14)  
+### Version 1.0 R.6e (2017-12-14)  
 [+] Fix handshake subroutine on Python 3 script  
 [+] Add Python 3 support for different script (waidps3.py)  
 
@@ -173,18 +173,20 @@ A : There can be several reasons and one or more can affect you :
 
 ## REFERENCE
 
-[1] This project is forked from [SYWorks](https://github.com/SYWorks/waidps)
-[2] [Official tutorial - Part 1](http://syworks.blogspot.hk/2014/04/waidps-wireless-auditing-intrusion.html)
-[3] [Official tutorial - Part 2](http://syworks.blogspot.hk/2014/04/waidps-wireless-auditing-intrusion_24.html)
-[4] [Official tutorial - Part 3](http://syworks.blogspot.hk/2014/04/waidps-wireless-auditing-intrusion_25.html)
-[5] [Official tutorial - Part 4](http://syworks.blogspot.hk/2014/06/waidps-wireless-auditing-intrusion.html)
-[6] [Official Youtube Playlist](https://www.youtube.com/watch?v=aGTQAWoeujA&index=1&list=PLrekpjW7JwW-T0CeXP8GwudtJmTJ6KZ8O)
-[7] [RealTek 8812AU Driver Installation](https://samiux.blogspot.com/2017/10/howto-install-realtek-8812au-driver.html)
-[8] [TP-Link Archer T4UHP (Realtek 8812AU chipset)](http://www.tp-link.com/us/products/details/cat-5520_Archer-T4UHP.html)
-[9] [ALFA AWUS036ACH (Realtek 8812AU chipset)](https://www.alfa.com.tw/service_1_detail/13.htm)
-[10] [ALFA AWUS1900 (Realtek 8814AU chipset)](https://www.alfa.com.tw/service_1_detail/15.htm)
-[11] [TP-Link Archer T9UH (Realtek 8814au chipset)](http://www.tp-link.com/us/products/details/cat-5520_Archer-T9UH.html)
-[12] [HOWTO : Install HashCat on Ubuntu 16.04.3](https://samiux.blogspot.com/2017/12/howto-install-hashcat-on-ubuntu-16043.html)
-[13] [HOWTO : Wifi Penetration Testing Without Tear](https://samiux.blogspot.com/2017/12/howto-wifi-penetration-testing-without.html)
-[14] [HOWTO : Wifi Intrusion Detection Without Tears](https://samiux.blogspot.com/2017/12/howto-wifi-intrusion-detection-without.html)
-[15] [[RESEARCH] How Secure Of Your Wifi Netowrk](https://samiux.blogspot.com/2018/05/research-how-secure-of-your-wifi-netowrk.html)
+[1] This project is forked from [SYWorks](https://github.com/SYWorks/waidps)  
+[2] [Official tutorial - Part 1](http://syworks.blogspot.hk/2014/04/waidps-wireless-auditing-intrusion.html)  
+[3] [Official tutorial - Part 2](http://syworks.blogspot.hk/2014/04/waidps-wireless-auditing-intrusion_24.html)  
+[4] [Official tutorial - Part 3](http://syworks.blogspot.hk/2014/04/waidps-wireless-auditing-intrusion_25.html)  
+[5] [Official tutorial - Part 4](http://syworks.blogspot.hk/2014/06/waidps-wireless-auditing-intrusion.html)  
+[6] [Official Youtube Playlist](https://www.youtube.com/watch?v=aGTQAWoeujA&index=1&list=PLrekpjW7JwW-T0CeXP8GwudtJmTJ6KZ8O)  
+[7] [RealTek 8812AU Driver Installation](https://samiux.blogspot.com/2017/10/howto-install-realtek-8812au-driver.html)  
+[8] [TP-Link Archer T4UHP (Realtek 8812AU chipset)](http://www.tp-link.com/us/products/details/cat-5520_Archer-T4UHP.html)  
+[9] [ALFA AWUS036ACH (Realtek 8812AU chipset)](https://www.alfa.com.tw/service_1_detail/13.htm)  
+[10] [ALFA AWUS1900 (Realtek 8814AU chipset)](https://www.alfa.com.tw/service_1_detail/15.htm)  
+[11] [TP-Link Archer T9UH (Realtek 8814au chipset)](http://www.tp-link.com/us/products/details/cat-5520_Archer-T9UH.html)  
+[12] [HOWTO : Install HashCat on Ubuntu 16.04.3](https://samiux.blogspot.com/2017/12/howto-install-hashcat-on-ubuntu-16043.html)  
+[13] [HOWTO : Wifi Penetration Testing Without Tear](https://samiux.blogspot.com/2017/12/howto-wifi-penetration-testing-without.html)  
+[14] [HOWTO : Wifi Intrusion Detection Without Tears](https://samiux.blogspot.com/2017/12/howto-wifi-intrusion-detection-without.html)  
+[15] [[RESEARCH] How Secure Of Your Wifi Netowrk](https://samiux.blogspot.com/2018/05/research-how-secure-of-your-wifi-netowrk.html)  
+
+

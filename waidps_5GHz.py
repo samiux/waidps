@@ -112,12 +112,12 @@ from subprocess import Popen, call, PIPE
 from sys import stdout, stdin
 from math import floor
 
-appver="1.0, R.6j"
+appver="1.0, R.6k"
 apptitle="WAIDPS"
 appDesc="- The Wireless Auditing, Intrusion Detection & Prevention System"
 appcreated="28 Feb 2014"
 appupdated="10 Oct 2014"
-appmodified="28 May 2018"
+appmodified="23 March 2020"
 appnote="Written By SY Chua, " + appcreated + ", Updated on " + appupdated + ", Modified on " + appmodified + " by Samiux"
 appdescription="Wiresless Auditing, Intrusion Detection & Prevention System is a whole new application which is design to harvest all WiFi information (AP / Station details) in your surrounding and store as a database for reference. With the stored data, user can further lookup for specific MAC or names for detailed information of it relation to other MAC addresses. It primarily purpose is to detect wireless attacks in WEP/WPA/WPS encryption. It also comes with an analyzer and viewer which allow user to further probe and investigation on the intrusion/suspicious packets captured. Additional features such as blacklisting which allow user to monitor specific MACs/Names's activities. All information captured can also be saved into pcap files for further investigation."
 class fcolor:

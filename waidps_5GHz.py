@@ -57,6 +57,9 @@
 ## Version 1.0 R.6j (2018-05-28)
 ## [+] Fix for Aircrack-NG 1.2
 ##
+## Version 1.0 R.6k (2020-03-23)
+## [+] Fix channel for 5GHz
+##
 ## Date : Modified since OCT 19, 2017 (version 1.0 R.6a)
 ##
 ## **********************************************************************************************
@@ -1120,7 +1123,8 @@ def MonitorAccessPoint(TargetMAC,Auto):
     printc (".",fcolor.SWhite + Now() + " - " + fcolor.SGreen + "Starting Sniffer for Access Point [ " + fcolor.SYellow +str(TargetMAC) + fcolor.SGreen + " ]..","")
 # For all bands
 #    cmdLine="xterm -geometry 100x20-0-200 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Sniffing Packet' -e 'airodump-ng --bssid " + TargetMAC  + " -c" + str(builtins.ATTACK_AP_CH) + " -w " + FName + " " + str(builtins.SELECTED_MON) + " | tee " + tmpdir + "SNIF_RESULT.txt" + "'"
-    cmdLine="xterm -geometry 100x20-0-200 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Sniffing Packet' -e 'airodump-ng -s 0 --ht40+ --bssid " + TargetMAC  + " -c" + str(builtins.ATTACK_AP_CH) + " -w " + FName + " " + str(builtins.SELECTED_MON) + " | tee " + tmpdir + "SNIF_RESULT.txt" + "'"
+    #cmdLine="xterm -geometry 100x20-0-200 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Sniffing Packet' -e 'airodump-ng -s 0 --ht40+ --bssid " + TargetMAC  + " -c" + str(builtins.ATTACK_AP_CH) + " -w " + FName + " " + str(builtins.SELECTED_MON) + " | tee " + tmpdir + "SNIF_RESULT.txt" + "'"
+    cmdLine="xterm -geometry 100x20-0-200 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Sniffing Packet' -e 'airodump-ng -s 0 --channel 1-200 --bssid " + TargetMAC  + " -c" + str(builtins.ATTACK_AP_CH) + " -w " + FName + " " + str(builtins.SELECTED_MON) + " | tee " + tmpdir + "SNIF_RESULT.txt" + "'"
 # For Python 3
 #    ps=subprocess.Popen(cmdLine , shell=True, stdout=subprocess.PIPE,stderr=open(os.devnull, 'w'),preexec_fn=os.setsid)
     ps=subprocess.Popen(cmdLine , shell=True, stdout=subprocess.PIPE,stderr=open(os.devnull, 'w'),preexec_fn=os.setsid, universal_newlines=True, bufsize=1)
@@ -2175,7 +2179,8 @@ def AttackWPAProc(TargetMAC,TargetChannel,ClentList,Auto):
     printc (".",fcolor.SWhite + Now() + " - " + fcolor.SGreen + "Starting Sniffer for Access Point [ " + fcolor.SYellow +str(TargetMAC) + fcolor.SGreen + " ]..","")
 # For all bands
 #    cmdLine="xterm -geometry 100x20-0-200 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Sniffing Packet' -e 'airodump-ng --bssid " + TargetMAC  + " -c" + str(TargetChannel) + " -w " + FName + " " + str(__builtin__.SELECTED_ATK) + " | tee " + tmpdir + "SNIF_RESULT.txt" + "'"
-    cmdLine="xterm -geometry 100x20-0-200 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Sniffing Packet' -e 'airodump-ng -s 0 --ht40+ --bssid " + TargetMAC  + " -c" + str(TargetChannel) + " -w " + FName + " " + str(builtins.SELECTED_ATK) + " | tee " + tmpdir + "SNIF_RESULT.txt" + "'"
+    #cmdLine="xterm -geometry 100x20-0-200 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Sniffing Packet' -e 'airodump-ng -s 0 --ht40+ --bssid " + TargetMAC  + " -c" + str(TargetChannel) + " -w " + FName + " " + str(builtins.SELECTED_ATK) + " | tee " + tmpdir + "SNIF_RESULT.txt" + "'"
+    cmdLine="xterm -geometry 100x20-0-200 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Sniffing Packet' -e 'airodump-ng -s 0 --channel 1-200 --bssid " + TargetMAC  + " -c" + str(TargetChannel) + " -w " + FName + " " + str(builtins.SELECTED_ATK) + " | tee " + tmpdir + "SNIF_RESULT.txt" + "'"
 # For Python 3
 # Do not change this
     ps=subprocess.Popen(cmdLine , shell=True, stdout=subprocess.PIPE,stderr=open(os.devnull, 'w'),preexec_fn=os.setsid)
@@ -3218,7 +3223,8 @@ def AttackWPSProc(TargetMAC,TargetChannel,ClentList,Auto):
     printc (".",fcolor.SWhite + Now() + " - " + fcolor.SGreen + "Overall Reaver Setting : [ " + fcolor.SWhite + str(OVERPARA) + fcolor.SGreen + " ] ..","")
 # For all bands
 #    cmdLine="xterm -geometry 100x20-0-200 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Sniffing Packet' -e 'airodump-ng --bssid " + TargetMAC  + " -c" + str(TargetChannel) + " -w " +  tmpdir + "tmp-capture" + " " + str(__builtin__.SELECTED_ATK) + " | tee " + tmpdir + "SNIF_RESULT.txt" + "'"
-    cmdLine="xterm -geometry 100x20-0-200 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Sniffing Packet' -e 'airodump-ng -s 0 --ht40+ --bssid " + TargetMAC  + " -c" + str(TargetChannel) + " -w " +  tmpdir + "tmp-capture" + " " + str(builtins.SELECTED_ATK) + " | tee " + tmpdir + "SNIF_RESULT.txt" + "'"
+    #cmdLine="xterm -geometry 100x20-0-200 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Sniffing Packet' -e 'airodump-ng -s 0 --ht40+ --bssid " + TargetMAC  + " -c" + str(TargetChannel) + " -w " +  tmpdir + "tmp-capture" + " " + str(builtins.SELECTED_ATK) + " | tee " + tmpdir + "SNIF_RESULT.txt" + "'"
+    cmdLine="xterm -geometry 100x20-0-200 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Sniffing Packet' -e 'airodump-ng -s 0 --channel 1-200 --bssid " + TargetMAC  + " -c" + str(TargetChannel) + " -w " +  tmpdir + "tmp-capture" + " " + str(builtins.SELECTED_ATK) + " | tee " + tmpdir + "SNIF_RESULT.txt" + "'"
 # For Python 3
 #    ps=subprocess.Popen(cmdLine , shell=True, stdout=subprocess.PIPE,stderr=open(os.devnull, 'w'),preexec_fn=os.setsid)
     ps=subprocess.Popen(cmdLine , shell=True, stdout=subprocess.PIPE,stderr=open(os.devnull, 'w'),preexec_fn=os.setsid, universal_newlines=True, bufsize=1)
@@ -3636,7 +3642,8 @@ def AttackWPSProc(TargetMAC,TargetChannel,ClentList,Auto):
                         printc (".",fcolor.SWhite + Now() + " - " + fcolor.SGreen + "Starting WPS Attack for Access Point [ " + fcolor.SYellow +str(TargetMAC) + fcolor.BGreen + " ]..","")
 # For all bands
 #                        cmdLine="xterm -geometry 100x20-0-200 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Sniffing Packet' -e 'airodump-ng --bssid " + TargetMAC  + " -c" + str(TargetChannel) + " -w " + tmpdir + "tmp-capture" + " " + str(__builtin__.SELECTED_ATK) + " | tee " + tmpdir + "SNIF_RESULT.txt" + "'"
-                        cmdLine="xterm -geometry 100x20-0-200 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Sniffing Packet' -e 'airodump-ng -s 0 --ht40+ --bssid " + TargetMAC  + " -c" + str(TargetChannel) + " -w " + tmpdir + "tmp-capture" + " " + str(builtins.SELECTED_ATK) + " | tee " + tmpdir + "SNIF_RESULT.txt" + "'"
+                        #cmdLine="xterm -geometry 100x20-0-200 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Sniffing Packet' -e 'airodump-ng -s 0 --ht40+ --bssid " + TargetMAC  + " -c" + str(TargetChannel) + " -w " + tmpdir + "tmp-capture" + " " + str(builtins.SELECTED_ATK) + " | tee " + tmpdir + "SNIF_RESULT.txt" + "'"
+                        cmdLine="xterm -geometry 100x20-0-200 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Sniffing Packet' -e 'airodump-ng -s 0 --channel 1-200 --bssid " + TargetMAC  + " -c" + str(TargetChannel) + " -w " + tmpdir + "tmp-capture" + " " + str(builtins.SELECTED_ATK) + " | tee " + tmpdir + "SNIF_RESULT.txt" + "'"
 # For Python 3
 #                        ps=subprocess.Popen(cmdLine , shell=True, stdout=subprocess.PIPE,stderr=open(os.devnull, 'w'),preexec_fn=os.setsid)
                         ps=subprocess.Popen(cmdLine , shell=True, stdout=subprocess.PIPE,stderr=open(os.devnull, 'w'),preexec_fn=os.setsid, universal_newlines=True, bufsize=1)
@@ -3807,7 +3814,8 @@ def RerunCapturedFile(TargetMAC,TargetChannel):
     printc (".",fcolor.SWhite + Now() + " - " + fcolor.SGreen + "Restarting new Sniffer for Access Point [ " + fcolor.SYellow +str(TargetMAC) + fcolor.SGreen + " ]..","")
 # For all bands
 #    cmdLine="xterm -geometry 100x20-0-200 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Sniffing Packet' -e 'airodump-ng --bssid " + TargetMAC  + " -c" + str(TargetChannel) + " -w " + FName + " " + str(__builtin__.SELECTED_ATK) + "'"
-    cmdLine="xterm -geometry 100x20-0-200 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Sniffing Packet' -e 'airodump-ng -s 0 --ht40+ --bssid " + TargetMAC  + " -c" + str(TargetChannel) + " -w " + FName + " " + str(builtins.SELECTED_ATK) + "'"
+    #cmdLine="xterm -geometry 100x20-0-200 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Sniffing Packet' -e 'airodump-ng -s 0 --ht40+ --bssid " + TargetMAC  + " -c" + str(TargetChannel) + " -w " + FName + " " + str(builtins.SELECTED_ATK) + "'"
+    cmdLine="xterm -geometry 100x20-0-200 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Sniffing Packet' -e 'airodump-ng -s 0 --channel 1-200 --bssid " + TargetMAC  + " -c" + str(TargetChannel) + " -w " + FName + " " + str(builtins.SELECTED_ATK) + "'"
 # For Python 3
 #    ps=subprocess.Popen(cmdLine , shell=True, stdout=subprocess.PIPE,stderr=open(os.devnull, 'w'),preexec_fn=os.setsid)
     ps=subprocess.Popen(cmdLine , shell=True, stdout=subprocess.PIPE,stderr=open(os.devnull, 'w'),preexec_fn=os.setsid, universal_newlines=True, bufsize=1)
@@ -3909,7 +3917,8 @@ def AttackWEPProc(TargetMAC,TargetChannel,ClentList):
     printc (".",fcolor.SWhite + Now() + " - " + fcolor.SGreen + "Starting Sniffer for Access Point [ " + fcolor.SYellow +str(TargetMAC) + fcolor.SGreen + " ]..","")
 # For all bands
 #    cmdLine="xterm -geometry 100x20-0-200 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Sniffing Packet' -e 'airodump-ng --bssid " + TargetMAC  + " -c" + str(TargetChannel) + " -w " + FName + " " + str(__builtin__.SELECTED_ATK) + "'"
-    cmdLine="xterm -geometry 100x20-0-200 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Sniffing Packet' -e 'airodump-ng -s 0 --ht40+ --bssid " + TargetMAC  + " -c" + str(TargetChannel) + " -w " + FName + " " + str(builtins.SELECTED_ATK) + "'"
+    #cmdLine="xterm -geometry 100x20-0-200 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Sniffing Packet' -e 'airodump-ng -s 0 --ht40+ --bssid " + TargetMAC  + " -c" + str(TargetChannel) + " -w " + FName + " " + str(builtins.SELECTED_ATK) + "'"
+    cmdLine="xterm -geometry 100x20-0-200 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Sniffing Packet' -e 'airodump-ng -s 0 --channel 1-200 --bssid " + TargetMAC  + " -c" + str(TargetChannel) + " -w " + FName + " " + str(builtins.SELECTED_ATK) + "'"
 # For Python 3
 #    ps=subprocess.Popen(cmdLine , shell=True, stdout=subprocess.PIPE,stderr=open(os.devnull, 'w'),preexec_fn=os.setsid)
     ps=subprocess.Popen(cmdLine , shell=True, stdout=subprocess.PIPE,stderr=open(os.devnull, 'w'),preexec_fn=os.setsid, universal_newlines=True, bufsize=1)
@@ -15173,11 +15182,13 @@ def RunAirodump():
         ps.wait();ps.stdout.close()
 # For all bands
 #        cmdLine="xterm -geometry 100x20-0-0 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Monitoring SSID/Clients' -hold -e 'airodump-ng --berlin " + str(TIMEOUT) + " --channel " + str(__builtin__.FIXCHANNEL) + " -w " + appdir + "/tmp/Collect-Dump " + __builtin__.SELECTED_MON + "'"
-        cmdLine="xterm -geometry 100x20-0-0 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Monitoring SSID/Clients' -hold -e 'airodump-ng -s 0 --ht40+ --berlin " + str(TIMEOUT) + " --channel " + str(builtins.FIXCHANNEL) + " -w " + appdir + "/tmp/Collect-Dump " + builtins.SELECTED_MON + "'"
+        #cmdLine="xterm -geometry 100x20-0-0 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Monitoring SSID/Clients' -hold -e 'airodump-ng -s 0 --ht40+ --berlin " + str(TIMEOUT) + " --channel " + str(builtins.FIXCHANNEL) + " -w " + appdir + "/tmp/Collect-Dump " + builtins.SELECTED_MON + "'"
+        cmdLine="xterm -geometry 100x20-0-0 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Monitoring SSID/Clients' -hold -e 'airodump-ng -s 0 --channel 1-200 --berlin " + str(TIMEOUT) + " --channel " + str(builtins.FIXCHANNEL) + " -w " + appdir + "/tmp/Collect-Dump " + builtins.SELECTED_MON + "'"
     else:
 # For all bands
 #        cmdLine="xterm -geometry 100x20-0-0 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Monitoring SSID/Clients' -hold -e 'airodump-ng --berlin " + str(TIMEOUT) + " -w " + appdir + "/tmp/Collect-Dump " + __builtin__.SELECTED_MON + "'"
-        cmdLine="xterm -geometry 100x20-0-0 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Monitoring SSID/Clients' -hold -e 'airodump-ng -s 0 --ht40+ --berlin " + str(TIMEOUT) + " -w " + appdir + "/tmp/Collect-Dump " + builtins.SELECTED_MON + "'"
+        #cmdLine="xterm -geometry 100x20-0-0 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Monitoring SSID/Clients' -hold -e 'airodump-ng -s 0 --ht40+ --berlin " + str(TIMEOUT) + " -w " + appdir + "/tmp/Collect-Dump " + builtins.SELECTED_MON + "'"
+        cmdLine="xterm -geometry 100x20-0-0 -iconic -bg black -fg white -fn 5x8 -title 'WAIDPS - Monitoring SSID/Clients' -hold -e 'airodump-ng -s 0 --channel 1-200 --berlin " + str(TIMEOUT) + " -w " + appdir + "/tmp/Collect-Dump " + builtins.SELECTED_MON + "'"
 # For Python 3
 #    ps=subprocess.Popen(cmdLine , shell=True, stdout=subprocess.PIPE,stderr=open(os.devnull, 'w'),preexec_fn=os.setsid)
     ps=subprocess.Popen(cmdLine , shell=True, stdout=subprocess.PIPE,stderr=open(os.devnull, 'w'),preexec_fn=os.setsid, universal_newlines=True, bufsize=1)

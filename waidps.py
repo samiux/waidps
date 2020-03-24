@@ -17,7 +17,7 @@
 ##
 ## Make sure to use aircrack-ng github's rtl8812au driver.
 ##
-## Modified by Samiux (https://www.infosec-ninjas.com)
+## Modified by Samiux (https://samiux.github.io)
 ## Version 1.0 R.6a (2017-10-19)
 ## [+] Fork from GitHub SYWorks v1.0 R.6
 ## [+] Fix for Kali Linux 2017.2
@@ -9060,7 +9060,7 @@ def exit_gracefully(code=0):
         print(fcolor.BWhite + "Please support by liking my page at " + fcolor.BBlue + "https://www.facebook.com/syworks" +fcolor.BWhite + " (SYWorks-Programming)")
 # Remind user to restart Network Manager
     print("")
-    print (fcolor.BWhite + "Maintained by Samiux - https://www.infosec-ninjas.com or https://samiux.blogspot.com") 
+    print (fcolor.BWhite + "Maintained by Samiux - https://samiux.github.io or https://samiux.blogspot.com") 
     print ("")
     print(fcolor.BYellow + "Please run 'systemctl restart NetworkManager' and then turn wifi interface ON when necessary.")
     print("")

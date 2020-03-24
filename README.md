@@ -74,8 +74,7 @@ It is well tested on Parrot Security OS 4.0.1. Other penetration testing Linux d
 
 ## FILE DESCRIPTION
 
-waidps_2.4GHz.py - Python 3 script for Aircrack-NG 1.2 (2.4GHz only)  
-waidps_5GHz.py - Python 3 script for Aircrack-NG 1.2 (5GHz only)  
+waidps.py - Python 3 script for Aircrack-NG 1.2 (2.4GHz & 5GHz)  
 
 ## INSTALLATION
 
@@ -88,17 +87,7 @@ git clone https://github.com/samiux/waidps
 
 cd waidps
 
-sudo python3 waidps_2.4GHz.py
-
-(sudo ./2.4)
-```
-
-or
-
-```bash
-sudo python3 waidps_5GHz.py
-
-(sudo ./5)
+sudo python3 waidps.py
 ```
 
 Follow the instruction on screen to install the required files.  It will then run the program directly.

@@ -108,7 +108,7 @@ sudo cp ~/waidps/*.py /root/.SYWorks/WAIDPS/
 - Wireless card or dongle can be in Monitor mode  
 - Wireless card or dongle driver can Packet Injection  
 - Wireless card or dongle driver should be supported by Linux  
-- Targets wireless signal better not below than 20% ( or -80 dbm)  
+- Targets wireless signal better not more than -70 dbm  
 - Attacker and target should be in the same mode  
 - At least one client is associated  
 
